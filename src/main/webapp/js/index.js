@@ -12,7 +12,7 @@ function login(){
 	$("#rdiv, #ldiv, #continue").css("display", "none");
 }
 function register(){
-	resize(700, 900);
+	resize(700, 500);
 	$("#regfield").css("display", "inline-block");
 	$("#rdiv, #ldiv, #continue").css("display", "none");
 	
