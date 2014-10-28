@@ -1,0 +1,53 @@
+body{
+	background: url("../graphics/sputnik.jpg") no-repeat center center fixed; 
+	background-size: cover;
+}
+.wrap{
+	background-color: rgba(0, 0, 0, 0.7);
+	display: inline-block;
+	width: 100%;
+	height: 400px;
+	color: white;
+	text-align: center;
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	margin-top: -10%;
+	margin-left: -50%;
+	margin-bottom: 30px;
+	transition: width 700ms ease-in-out, 
+				height 700ms ease-in-out, 
+				margin 700ms ease-in-out;
+}
+.fields{
+	display: none;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+.backbutton{
+	bottom: 20px;
+	left: 35px;
+}
+#rdiv, #ldiv{
+	width: 50%;
+	height: 50%;
+}
+#rdiv{
+	float: right;
+}
+#ldiv{
+	float: left;
+}
+#logpg, #regpg{
+	width: 170px;
+	margin-top: 20px;
+}
+#logpg{
+	float: right;
+	margin-right: 2px;
+}
+#regpg{
+	float: left;
+	margin-left: 2px;
+}
