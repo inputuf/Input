@@ -5,6 +5,9 @@
 body {
     font-family: calibri;
 }
+.shadow{
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.23);
+}
 .border{
 	background-color: rgba(0, 0, 0, 0.87);
 	margin: 2px;
