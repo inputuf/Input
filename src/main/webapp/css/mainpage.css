@@ -33,14 +33,20 @@ div{
 	box-sizing: border-box;
 	width: 100%;
 	height: 2000px;
-	padding-left: 300px;
+	padding-left: 240px;
 	float: left;
 	text-align: center;
 	
 }
 #suggested{
 	height: 500px;
-	width: 1000px;
+	width: 800px;
 	margin: auto;
 	margin-bottom: 10px;
+}
+#nav li{
+	display: inline;
+	vertical-align: center;
+	line-height: 58px;
+	
 }
