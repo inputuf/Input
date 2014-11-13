@@ -6,25 +6,24 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/mainpage.css">
 	<script src="../js/jquery-1.11.1.js"></script>
+    <script src="../js/mainpage.js"></script>
 </head>
 <body>
-	<div id="sidebar">
-		
+	<div id="sidebar" class="shadow">
+		<div id="logo" class="item"> Input </div>
 	</div>
 	<div id="header" class="shadow">
 		<ul id="nav">
-			<li>item</li>
-			<li>item</li>
-			<li>item</li>
-			<li>Login / Register</li>
+            <li id="home" class="item" onclick="goto('home')">Home</li>
+			<li id="browse" class="item" onclick="goto('browse')">Browse requests</li>
+			<li id="my" class="item">My requests</li>
 		</ul>
+        <span class="item login">Login / Register</span>
 	</div>
 	<div id="spacer" style="height: 58px;"></div>
 	<div id="content">
 		
-		<div id="suggested" class="shadow"></div>
-		<div id="suggested" class="shadow"></div>
-		<div id="suggested" class="shadow"></div>
+		<div id="suggested" class="shadow"> hej </div>
 		
 	</div>
 </body>
