@@ -12,7 +12,10 @@ div{
 	vertical-align: center;
 	line-height: 58px;
 }
-.login{
+.item:hover {
+    cursor: pointer;
+}
+#login{
     float: right;
     height: 58px;
 	padding: 0px 20px;
@@ -57,7 +60,7 @@ div{
 	text-align: center;
 	
 }
-#suggested{
+.card{
 	height: 500px;
 	width: 800px;
 	margin: auto;
