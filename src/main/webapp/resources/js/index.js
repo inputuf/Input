@@ -28,3 +28,6 @@ function back() {
 	$(".fields").css("display", "none");
 	$("#rdiv, #ldiv, #continue").css("display", "inline-block");
 }
+function submitOnClick(formName){
+	document.forms[formName].submit();
+}

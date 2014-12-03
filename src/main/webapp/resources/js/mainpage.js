@@ -1,13 +1,20 @@
-"use strict";
-
 function goto(page) {
     $(".item").css("background-color", "transparent");
     $(".login").css("background-color", "transparent");
 			
-    if (page === "home")
+    if (page === "home") {
         $("#home").css("background-color", "#E64A19");
-    if (page === "browse") 
+		$(".home").css("display", "inline-block");
+		$(".browse, .my").css("display", "none");
+	}
+    if (page === "browse") {
         $("#browse").css("background-color", "#E64A19");
-    if (page === "my") 
+		$(".browse").css("display", "inline-block");
+		$(".home, .my").css("display", "none");
+	}
+    if (page === "my") {
         $("#my").css("background-color", "#E64A19");
+		$(".my").css("display", "inline-block");
+		$(".browse, .home").css("display", "none");
+	}
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html" lang="sv">
+<h:head>
+	<meta charset="utf-8" />
+	<title> Input - it's not rocket science </title>
+	<h:outputStylesheet library="css" name="style.css"  />
+	<h:outputStylesheet library="css" name="mainpage.css"  />
+	<h:outputScript name="js/jquery-1.11.1.js" />
+	<h:outputScript name="js/mainpage.js" />
+</h:head>
+<h:body onload="goto('home')">
+	<div id="sidebar" class="shadow">
+		<div id="logo" class="item"> Input </div>
+	</div>
+	<div id="header" class="shadow">
+		<ul id="nav">
+            <li id="home" class="item fleft" onclick="goto('home')">Home</li>
+			<li id="browse" class="item fleft" onclick="goto('browse')">Browse requests</li>
+			<li id="my" class="item fleft" onclick="goto('my')">My requests</li>
+		</ul>
+        <a class="item fright" href="../login.xhtml">Login / Register</a>
+	</div>
+	<div id="spacer" style="height: 58px;"></div>
+	<div id="content">
+		
+		<div class="card shadow home">  home </div>
+		<div class="card shadow browse"> browse </div>
+        <div class="card shadow my"> my </div>
+        
+	</div>
+</h:body>
+</html>

@@ -18,8 +18,17 @@ body {
 .textbutton{
 	color: white;
 	font-size: 20px;
-	position: absolute;
 	text-decoration: none;
+}
+.br{
+	position: absolute;
+	bottom: 20px;
+	right: 35px;
+}
+.bl{
+	position: absolute;
+	bottom: 20px;
+	left: 35px;
 }
 .button{
 	height: 40px;
