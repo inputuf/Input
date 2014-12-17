@@ -12,8 +12,12 @@
     	<h:form>
     		Ett litet exempel på värden från servern: <br/>
     		<h:commandButton value="Öka counter" action="#{exempelBean.increaseCounter}" />
-    		Counter: #{exempelBean.counter} <br/><br/>	
+    		Counter: #{exempelBean.counter} <br/>
+			<h:commandButton value="Nollställ" action="#{exempelBean.setCounter(0)}" /><br/><br/>	
 			<h:commandButton value="Logga ut" action="#{sessionBean.logout}" />
-		</h:form> 			
+		</h:form> 
+		<h:form>
+			
+		</h:form> 
     </h:body>
 </html>

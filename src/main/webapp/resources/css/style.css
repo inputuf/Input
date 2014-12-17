@@ -19,6 +19,8 @@ body {
 	color: white;
 	font-size: 20px;
 	text-decoration: none;
+	background-color: transparent;
+	border: none;
 }
 .br{
 	position: absolute;

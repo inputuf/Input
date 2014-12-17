@@ -24,6 +24,4 @@ public class ExempelBean implements Serializable {
 	public void setCounter(int counter) {
 		this.counter = counter;
 	}
-
-	
 }

@@ -11,7 +11,7 @@
 	<h:outputStylesheet library="css" name="style.css"  />
 	<h:outputStylesheet library="css" name="login.css"  />
 	<h:outputScript name="js/jquery-1.11.1.js" />
-	<h:outputScript name="js/index.js" />
+	<h:outputScript name="js/login.js" />
 </h:head>
 <h:body>
 	<div class="wrap">
@@ -26,21 +26,15 @@
 			<div id="regpg" class="border button" onclick="register()">Registrera</div><br/>
 		</div>
 		
-		<a id="continue" class="textbutton br" href="html/mainpage.xhtml" style="bottom: 20px; right: 35px;"> Continue to Input </a>
+		<h:commandButton id="continue" class="textbutton br" action="mainpage?faces-redirect=true" value="Continue to Input" />
 		
 		<div class="fields" id="loginfield">
 			<form method="post" action="j_security_check" name="loginForm" id="myform">
 				<h:inputText id="j_username" autocomplete="off" style="width: 135px" class="border textfield" />
 				<h:inputSecret id="j_password" autocomplete="off" style="width: 135px" class="border textfield" />
-                <!-- class textbutton value? -->
+				<h:commandButton class="textbutton br" type="submit" value="Logga in"/>
 			</form>
 			<a class="textbutton bl" onclick="back()"> Tillbaka </a>
-			<div class="textbutton br" onclick="submitOnClick('myform')"> Logga in </div>
-			
-			<!-- old
-			<input style="width: 135px" class="border textfield" type="text" name="email" placeholder="Mailadress" />
-			<input style="width: 135px" class="border textfield" type="password" name="password" placeholder="Lösenord" />
-			<a class="backbutton textbutton" onclick="back()"> Tillbaka </a> -->
 		</div>
 		
 		<div class="fields" id="regfield">

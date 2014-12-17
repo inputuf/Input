@@ -22,15 +22,21 @@
 			<li id="browse" class="item fleft" onclick="goto('browse')">Browse requests</li>
 			<li id="my" class="item fleft" onclick="goto('my')">My requests</li>
 		</ul>
-        <a class="item fright" href="../login.xhtml">Login / Register</a>
+<!--		<h:commandButton class="item fright" action="#{sessionBean.logout}" value="Log out #{request.remoteUser}" />   -->
+			<a class="item fright">Log out #{request.remoteUser}</a> 
 	</div>
 	<div id="spacer" style="height: 58px;"></div>
-	<div id="content">
-		
-		<div class="card shadow home">  home </div>
-		<div class="card shadow browse"> browse </div>
-        <div class="card shadow my"> my </div>
-        
+	<div class="content home">		
+		<div class="card shadow"> home </div>
+		<div class="card shadow"> home2 </div>
+        <div class="card shadow"> home3 </div>
+	</div>
+	<div class="content browse">
+		<div class="card shadow"> browse </div>
+	</div>
+	<div class="content my">
+		<div class="card shadow"> #{request.remoteUser} </div>
+		<div class="card shadow"> my </div>
 	</div>
 </h:body>
 </html>
