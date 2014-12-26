@@ -17,7 +17,38 @@
 			<h:commandButton value="Logga ut" action="#{sessionBean.logout}" />
 		</h:form> 
 		<h:form>
+			<h:outputLabel for="firstName" value="Förnamn" />
+			<h:inputText id="firstName" value="#{userBean.user.firstName}" /><br/>
 			
+			<h:outputLabel for="lastName" value="Efternamn" />
+			<h:inputText id="lastName" value="#{userBean.user.lastName}" /><br/>
+			
+			<h:outputLabel for="userName" value="Användarnamn" />
+			<h:inputText id="userName" value="#{userBean.user.userName}" /><br/>
+			
+			<h:outputLabel for="password" value="Lösenord" />
+			<h:inputSecret id="password" value="#{userBean.user.password}" /><br/>
+			
+			<h:commandButton value="Registrera användare" action="#{userBean.register}" />
 		</h:form> 
+		<br/><br/><br/>
+		<h:form>
+			<h:commandButton value="Lista alla användare" action="#{userBean.findAllUsers}"/>
+			<h:dataTable var="user" value="#{userBean.allUsers}" >
+				<h:column>
+	    				<f:facet name="header">Användarnamn</f:facet>
+	    				#{user.userName}
+	    		</h:column>
+				<h:column>
+	    				<f:facet name="header">Förnamn</f:facet>
+	    				#{user.firstName}
+	    		</h:column>
+
+				<h:column>
+	    				<f:facet name="header">Efternamn</f:facet>
+	    				#{user.lastName}
+	    		</h:column>
+	    	</h:dataTable>	
+		</h:form>
     </h:body>
 </html>
