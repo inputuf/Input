@@ -3,7 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"      
-      xmlns:h="http://java.sun.com/jsf/html" lang="sv">
+      xmlns:h="http://java.sun.com/jsf/html" 
+	  lang="sv">
 
 <h:head>
 	<meta charset="utf-8" />
@@ -26,23 +27,37 @@
 			<div id="regpg" class="border button" onclick="register()">Registrera</div><br/>
 		</div>
 		
-		<h:commandButton id="continue" class="textbutton br" action="mainpage?faces-redirect=true" value="Continue to Input" />
-		
 		<div class="fields" id="loginfield">
 			<form method="post" action="j_security_check" name="loginForm" id="myform">
-				<h:inputText id="j_username" autocomplete="off" style="width: 135px" class="border textfield" />
-				<h:inputSecret id="j_password" autocomplete="off" style="width: 135px" class="border textfield" />
+				<h:inputText id="j_username" autocomplete="off" class="border textfield" />
+				<h:inputSecret id="j_password" autocomplete="off" class="border textfield" />
 				<h:commandButton class="textbutton br" type="submit" value="Logga in"/>
 			</form>
 			<a class="textbutton bl" onclick="back()"> Tillbaka </a>
 		</div>
 		
 		<div class="fields" id="regfield">
-			<input style="width: 135px" class="border textfield" type="text" name="FirstName" placeholder="Förnamn" />
+			<h:form>
+				<h:outputLabel for="firstName" value="Förnamn" /><br/>
+				<h:inputText class="border textfield" id="firstName" value="#{userBean.user.firstName}" /><br/>
+				
+				<h:outputLabel for="lastName" value="Efternamn" /><br/>
+				<h:inputText class="border textfield" id="lastName" value="#{userBean.user.lastName}" /><br/>
+			
+				<h:outputLabel for="userName" value="Användarnamn" /><br/>
+				<h:inputText class="border textfield" id="userName" value="#{userBean.user.userName}" /><br/>
+			
+				<h:outputLabel for="password" value="Lösenord" /><br/>
+				<h:inputSecret class="border textfield" id="password" value="#{userBean.user.password}" /><br/>
+			
+				<h:commandButton class="textbutton br" value="Registrera användare" action="#{userBean.register}" />
+			</h:form>
+
+<!--		<input style="width: 135px" class="border textfield" type="text" name="FirstName" placeholder="Förnamn" />
 			<input style="width: 135px" class="border textfield" type="text" name="LastName" placeholder="Efternamn" /><br/>
 			<input class="border textfield" type="text" name="email" placeholder="Mailadress" /><br/>
 			<input style="width: 135px" class="border textfield" type="password" name="password" placeholder="Lösenord" />
-			<input style="width: 135px" class="border textfield" type="password" name="password" placeholder="Bekräfta lösenord" /><br/>
+			<input style="width: 135px" class="border textfield" type="password" name="password" placeholder="Bekräfta lösenord" /><br/> -->
 			<a class="textbutton bl" onclick="back()"> Tillbaka </a>
 		</div>
 	</div>

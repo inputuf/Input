@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:h="http://java.sun.com/jsf/html">
- 
+		
     <h:head>
         <title>Exempel + Logga ut</title>
     </h:head>
@@ -13,7 +13,8 @@
     		Ett litet exempel på värden från servern: <br/>
     		<h:commandButton value="Öka counter" action="#{exempelBean.increaseCounter}" />
     		Counter: #{exempelBean.counter} <br/>
-			<h:commandButton value="Nollställ" action="#{exempelBean.setCounter(0)}" /><br/><br/>	
+			<h:commandButton value="Nollställ" action="#{exempelBean.setCounter(0)}" /><br/>
+			<h:commandButton value="Femställ" action="#{exempelBean.setCounter(5)}" /><br/><br/>	
 			<h:commandButton value="Logga ut" action="#{sessionBean.logout}" />
 		</h:form> 
 		<h:form>

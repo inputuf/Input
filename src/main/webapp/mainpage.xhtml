@@ -22,17 +22,42 @@
 			<li id="browse" class="item fleft" onclick="goto('browse')">Browse requests</li>
 			<li id="my" class="item fleft" onclick="goto('my')">My requests</li>
 		</ul>
-<!--		<h:commandButton class="item fright" action="#{sessionBean.logout}" value="Log out #{request.remoteUser}" />   -->
-			<a class="item fright">Log out #{request.remoteUser}</a> 
+		<h:form>
+			<h:commandButton value="Logga ut" action="#{sessionBean.logout}" />
+		</h:form>
 	</div>
 	<div id="spacer" style="height: 58px;"></div>
 	<div class="content home">		
-		<div class="card shadow"> home </div>
-		<div class="card shadow"> home2 </div>
-        <div class="card shadow"> home3 </div>
+		<div class="card shadow"> 
+			<h:form>
+				<h:commandButton value="Öka counter" action="#{exempelBean.increaseCounter}" />
+				Counter: #{exempelBean.counter} <br/>
+				<h:commandButton value="Nollställ" action="#{exempelBean.setCounter(0)}" /><br/>
+				<h:commandButton value="Femställ" action="#{exempelBean.setCounter(5)}" /><br/>
+			</h:form>
+		</div>
 	</div>
 	<div class="content browse">
-		<div class="card shadow"> browse </div>
+		<div class="card shadow"> 
+			<h:form>
+				<h:commandButton value="Lista alla användare" action="#{userBean.findAllUsers}"/>
+				<h:dataTable var="user" value="#{userBean.allUsers}" >
+					<h:column>
+	    				<f:facet name="header">Användarnamn</f:facet>
+	    				#{user.userName}
+					</h:column>
+					<h:column>
+	    				<f:facet name="header">Förnamn</f:facet>
+	    				#{user.firstName}
+					</h:column>
+
+					<h:column>
+	    				<f:facet name="header">Efternamn</f:facet>
+	    				#{user.lastName}
+					</h:column>
+				</h:dataTable>	
+			</h:form> 
+		</div>
 	</div>
 	<div class="content my">
 		<div class="card shadow"> #{request.remoteUser} </div>
