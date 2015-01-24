@@ -1,5 +1,5 @@
 body{
-	background-color: #e0e0e0;
+	background-color: #e0e0e0; 
 }
 div{
 	background-color: #ffffff;
@@ -14,6 +14,9 @@ a{
 	list-style-type: none;
 	vertical-align: center;
 	line-height: 58px;
+	margin: 0px;
+	border: 0px;
+	font-size: 20px;
 }
 .fleft{
 	float: left;
@@ -57,7 +60,6 @@ a{
 	position: fixed;
 	top: 0px;
 	margin-left: 240px;
-	font-size: 20px;
 }
 .content{
 	background-color: #e0e0e0;
