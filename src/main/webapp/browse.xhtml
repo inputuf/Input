@@ -1,34 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"      
-      xmlns:h="http://java.sun.com/jsf/html" lang="sv">
-<h:head>
-	<meta charset="utf-8" />
-	<title> Input - it's not rocket science </title>
-	<h:outputStylesheet library="css" name="style.css"  />
-	<h:outputStylesheet library="css" name="mainpage.css"  />
-	<h:outputScript name="js/jquery-1.11.1.js" />
-	<h:outputScript name="js/mainpage.js" />
-</h:head>
-<h:body onload="goto('home')">
-	<div id="sidebar" class="shadow">
-		<div id="logo" class="item"> Input </div>
-	</div>
-	<nav id="header" class="shadow">
-		<a href="home.xhtml" class="item fleft"> Home </a>
-		<a href="browse.xhtml" class="item fleft"> Browse requests </a>
-		<a href="my.xhtml" class="item fleft"> My requests </a>
-		<h:form>
-			<h:commandButton class="item fright" value="Logout" action="#{sessionBean.logout}" />
-		</h:form>
-	</nav>
-	<div id="spacer" style="height: 58px;"></div>
-	<div class="content">
-		<div class="card shadow"> 
-			
-		</div>
-	</div>
-</h:body>
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"	  
+	  lang="sv">'
+	<h:body>
+		<ui:composition template="templates/common.xhtml" >
+			<ui:define name="content">
+				<h:form>
+					<h:commandButton value="Lista alla användare" action="#{userBean.findAllUsers}"/>
+					<h:dataTable var="user" value="#{userBean.allUsers}" >
+						<h:column>
+							<f:facet name="header">Användarnamn</f:facet>
+							#{user.userName}
+						</h:column>
+						<h:column>
+							<f:facet name="header">Förnamn</f:facet>
+							#{user.firstName}
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">Efternamn</f:facet>
+							#{user.lastName}
+						</h:column>
+					
+						<h:column>
+							<f:facet name="header">Mailadress</f:facet>
+							#{user.email}
+						</h:column>
+					</h:dataTable>	
+				</h:form>
+			</ui:define> 
+		</ui:composition>
+	</h:body>
 </html>

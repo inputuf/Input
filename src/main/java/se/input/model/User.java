@@ -37,6 +37,9 @@ public class User implements Serializable {
 	@Column(name = "user_password")
 	private String password;
 	
+	@Column(name ="user_email")
+	private String email;
+	
 	@OneToOne(fetch = FetchType.EAGER, 
 	cascade = CascadeType.ALL, mappedBy = "user")
 	private Role role;
@@ -71,6 +74,14 @@ public class User implements Serializable {
 	
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Role getRole() {
