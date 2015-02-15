@@ -15,15 +15,14 @@ import javax.persistence.Table;
 @NamedQueries(
 		@NamedQuery(name = User.GET_ALL_USERS, query = "SELECT u FROM User u"))
 	
-
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
+	
 	public static final String GET_ALL_USERS = "GET_ALL_USERS";
-
+	
 	@Id
 	@Column(name = "user_name")
 	private String userName;
@@ -43,7 +42,7 @@ public class User implements Serializable {
 	@OneToOne(fetch = FetchType.EAGER, 
 	cascade = CascadeType.ALL, mappedBy = "user")
 	private Role role;
-
+	
 	public String getFirstName() {
 		return firstName;
 	}

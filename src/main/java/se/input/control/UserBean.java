@@ -13,9 +13,9 @@ import se.input.service.UserService;
 @ManagedBean
 @SessionScoped
 public class UserBean implements Serializable {
-
+	
 	private static final long serialVersionUID = 1L;
-
+	
 	private User user = new User();
 	private List<User> allUsers;
 	
@@ -24,11 +24,11 @@ public class UserBean implements Serializable {
 	public void register() {
 		userService.register(user);
 	}
-
+	
 	public User getUser() {
 		return user;
 	}
-
+	
 	public void setUser(User user) {
 		this.user = user;
 	}

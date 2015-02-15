@@ -8,6 +8,7 @@
 	<h:body>
 		<ui:composition template="templates/common.xhtml" >
 			<ui:define name="content">
+				<h1>Hellu #{userBean.user.userName}</h1>
 				<h:form>
 					<h:commandButton value="Oka counter" action="#{exempelBean.increaseCounter}" />
 					Counter: #{exempelBean.counter} <br/>

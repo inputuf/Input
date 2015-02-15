@@ -20,7 +20,7 @@ public class Role implements Serializable {
 	public static enum ROLE {
         admin, user
     }
-	    
+	   
     @Id
     @Column(name = "role_name")
     @Enumerated(EnumType.STRING)

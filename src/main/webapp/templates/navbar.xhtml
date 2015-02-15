@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"	  
+	  lang="sv">
+	<body>
+		<ui:composition>
+			<nav id="header" style="width: 1000px; background-color: transparent; left: calc(50% - 500px);">
+				<h:form>
+					<h:commandButton class="item fleft" action="home" value="Home" />
+					<h:commandButton class="item fleft" action="browse" value="Browse requests" />
+					<h:commandButton class="item fleft" action="my" value="My requests" />
+				</h:form>
+				<h:form>
+					<h:commandButton class="item fright" value="Logout" action="#{sessionBean.logout}" />
+				</h:form>
+			</nav>
+			<div id="spacer" style="height: 58px;"></div>
+		</ui:composition>
+	</body>
+</html>

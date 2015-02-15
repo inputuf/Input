@@ -8,7 +8,35 @@
 	<h:body>
 		<ui:composition template="templates/common.xhtml" >
 			<ui:define name="content">
+				<h:form>
+					<h:outputLabel for="id" value="ID" /><br/>
+					<h:inputText id="id" value="#{requestBean.request.id}" /><br/>
 				
+					<h:outputLabel for="owner" value="owner" /><br/>
+					<h:inputText id="owner" value="#{requestBean.request.owner}" /><br/>
+			
+					<h:outputLabel for="message" value="message" /><br/>
+					<h:inputText id="message" value="#{requestBean.request.message}" /><br/>
+					
+					<h:commandButton value="add request" action="#{requestBean.create}" />
+				</h:form>
+				<h:form>
+					<h:commandButton value="Lista alla requests" action="#{requestBean.findAllRequests}"/>
+					<h:dataTable var="request" value="#{requestBean.allRequests}" >
+						<h:column>
+							<f:facet name="header">ID</f:facet>
+							#{request.id}
+						</h:column>
+						<h:column>
+							<f:facet name="header">Owner</f:facet>
+							#{request.owner}
+						</h:column>
+						<h:column>
+							<f:facet name="header">Message</f:facet>
+							#{request.message}
+						</h:column>
+					</h:dataTable>	
+				</h:form>
 			</ui:define> 
 		</ui:composition>
 	</h:body>
